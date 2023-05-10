@@ -27,7 +27,7 @@ let caractere = prompt("Introduceti sirul de caracte");
 var count = 0;
 
 for (i = 0; i <= caractere.length; i++){
-  if(caractere[i]=='a' || caractere[i]=='e' || caractere[i]=='i' || caractere[i]=='o' || caractere[i]=='u'){
+  if(caractere[i]=='a' || caractere[i]=='e' || caractere[i]=='i' || caractere[i]=='o' || caractere[i]=='u' || caractere[i]=='A' || caractere[i]=='E' || caractere[i]=='I' || caractere[i]=='O' || caractere[i]=='U'){
     count++;
   }
 }1
