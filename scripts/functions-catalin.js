@@ -98,4 +98,29 @@ function allisEvenBetween2Number(minNumber, maxNumber){
     return;
 }
 
+/* -------------------------------------------------------------------------- */
+/*            9- 3 numere parametri afisarea lor in numar crescator           */
+/* -------------------------------------------------------------------------- */
 
+function ascSort(firstNumber, secondNumber, thirdNumber){
+    var lista = [firstNumber, secondNumber, thirdNumber];
+    var result;
+    for( var i = 0; i < 2; i++){
+        for( var j = 0; j < 2-i; j++){
+            if(lista[j] > lista[j+1]){
+                result = lista[j];
+                lista[j]=lista[j+1];
+                lista[j+1]=result;
+
+            }
+        }
+    }
+    var sir= "";
+    for( var i=0; i<3; i++){
+        sir +=lista[i];
+        if(i<2){
+            sir +=', ';
+        }
+    }
+    console.log(sir);
+}
