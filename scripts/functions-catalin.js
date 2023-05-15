@@ -124,3 +124,73 @@ function ascSort(firstNumber, secondNumber, thirdNumber){
     }
     console.log(sir);
 }
+
+/* -------------------------------------------------------------------------- */
+/*            10- 3 numere parametri afisarea lor in numar descrescator           */
+/* -------------------------------------------------------------------------- */
+
+function descSort(firstNumber, secondNumber, thirdNumber){
+    var lista = [firstNumber, secondNumber, thirdNumber];
+    var result;
+    for( var i = 0; i < 2; i++){
+        for( var j = 0; j < 2-i; j++){
+            if(lista[j] < lista[j+1]){
+                result = lista[j+1];
+                lista[j+1]=lista[j];
+                lista[j]=result;
+
+            }
+        }
+    }
+    var sir= "";
+    for( var i=0; i<3; i++){
+        sir +=lista[i];
+        if(i<2){
+            sir +=', ';
+        }
+    }
+    console.log(sir);
+}
+
+/* -------------------------------------------------------------------------- */
+/*             11 - primeste un numar si afiseaza tabla inmultirii            */
+/* -------------------------------------------------------------------------- */
+
+function multiplyTable(number){
+    var result;
+    for( var i= 0; i<10; i++)
+    {
+        result = number * i;
+        console.log(result);
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*               12 - nr persoane, locuri disponibile si mesele               */
+/* -------------------------------------------------------------------------- */
+
+function asezarePersoane(numarPersoane, locuriDisponibile, mese) {
+    var locuriTotale = locuriDisponibile * mese;
+    
+    if (numarPersoane > locuriTotale) {
+      console.log("Nu există suficiente locuri pentru toate persoanele.");
+      return;
+    }
+    
+    var locuriRamase = locuriTotale - numarPersoane;
+    
+    console.log("Au rămas " + locuriRamase + " locuri libere.");
+  }
+  
+
+  /* -------------------------------------------------------------------------- */
+  /*                            14 - calculare varsta                           */
+  /* -------------------------------------------------------------------------- */
+  
+  function calculareVarsta(anNastere){
+    var data = new Date();
+    var anCurent = data.getFullYear();
+    var varsta = anCurent - anNastere;
+    
+    return varsta;
+  }
