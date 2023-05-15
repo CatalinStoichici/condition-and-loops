@@ -58,10 +58,16 @@ function sumUpToNumber(number){
 /* -------------------------------------------------------------------------- */
 
 function numberPrim(number){
-    if (number % 2 == 0 || number % 3 == 0 && number % number == 0){
-        return false;
-    }else {
+    var divizori=0;
+    for ( var i=1;i<=number;i++){
+        if(number % i ==0){
+            divizori++;
+        }
+    }
+    if(divizori == 2){
         return true;
+    } else{
+        return false;
     }
 }
 
