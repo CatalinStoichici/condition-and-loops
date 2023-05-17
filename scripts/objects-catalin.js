@@ -29,11 +29,11 @@ var familii = {
 function concatenareNumeFamilie(familii){
 var numeFamilie = "";
 for(var numfamilii in familii){
-    numeFamilie += familii[numfamilii].numeTata + " " + familii[numfamilii].numeMama + ", ";
+    numeFamilie += familii[numfamilii].numeTata + " " + familii[numfamilii].numeMama + " ";
     
 }
 console.log("Numele familiilor sunt: "+ numeFamilie);
-return numeFamilie;
+return numeFamilie.trim();
 }
 concatenareNumeFamilie(familii)
 /* -------------------------------------------------------------------------- */
@@ -124,7 +124,7 @@ verificareDepartament('departamentIT')
     candidat2: { nume: "Alex", calificari: ["Java", "Python", "C++"] }
   };
 
-  function verificaCalificare(calificareCautata) {
+  function verificaCalificare(candidati, calificareCautata) {
     
     for (var candidat in candidati) {
       if (candidati.hasOwnProperty(candidat)) {
@@ -138,8 +138,7 @@ verificareDepartament('departamentIT')
   }
   
   // Exemplu de utilizare
-  var calificareCautata = "JavaScript";
-  var existaCalificare = verificaCalificare(calificareCautata);
+  console.log(verificaCalificare(candidati, 'JavaScript'))
   
-  console.log("Există calificarea " + calificareCautata + "? " + existaCalificare);
+  
   
