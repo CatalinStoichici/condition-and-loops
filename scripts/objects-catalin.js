@@ -8,14 +8,15 @@ var studenti = {
     student2: { nume: "Alice", varsta: 22 },
     student3: { nume: "Mark", varsta: 19 }
   };
-
+  function calculeazaSumaVarstelor(studenti){
   var varstaStudenti=0;
   for (var student in studenti) {
     varstaStudenti += studenti[student].varsta;
+    console.log("Suma vârstelor studenților este: " + varstaStudenti);
+  }
+  return varstaStudenti;
 }
-
-console.log("Suma vârstelor studenților este: " + varstaStudenti);
-
+calculeazaSumaVarstelor(studenti)
 /* -------------------------------------------------------------------------- */
 /*                Exercițiul 2: Concatenarea numelor de familie               */
 /* -------------------------------------------------------------------------- */
@@ -25,14 +26,16 @@ var familii = {
     familie1: { numeTata: "Popescu", numeMama: "Ionescu" },
     familie2: { numeTata: "Radu", numeMama: "Georgescu" }
   };
-
+function concatenareNumeFamilie(familii){
 var numeFamilie = "";
 for(var numfamilii in familii){
     numeFamilie += familii[numfamilii].numeTata + " " + familii[numfamilii].numeMama + ", ";
+    
 }
-
 console.log("Numele familiilor sunt: "+ numeFamilie);
-
+return numeFamilie;
+}
+concatenareNumeFamilie(familii)
 /* -------------------------------------------------------------------------- */
 /*                Exercițiul 3: Găsirea celui mai mare punctaj                */
 /* -------------------------------------------------------------------------- */
@@ -43,15 +46,18 @@ var elevi = {
     elev2: { nume: "Alex", punctaj: 95 },
     elev3: { nume: "Andrei", punctaj: 85 }
   };
-
+  function punctajMare(elevi){
   var maxPunctaj=0;
   for (var elev in elevi){
     if(elevi[elev].punctaj > maxPunctaj){
-        maxPunctaj = elevi[elev].punctaj
+        maxPunctaj = elevi[elev].punctaj;
+        
     }
   }
   console.log("Cel mai mare punctaj este: "+ maxPunctaj);
-
+  return maxPunctaj;
+}
+punctajMare(elevi)
   /* -------------------------------------------------------------------------- */
   /*       Exercițiul 4: Verificarea existenței unui email într-un obiect       */
   /* -------------------------------------------------------------------------- */
@@ -98,14 +104,17 @@ var companie = {
     departamentIT: { nume: "John", vechime: 5 },
     departamentVanzari: { nume: "Alice", vechime: 3 }
   };
-  var departamentCautat = 'departamentIT';
 
+  function verificareDepartament(departamentCautat){
+  
   if (companie.hasOwnProperty(departamentCautat)) {
     console.log("Departamentul " + departamentCautat + " există în obiectul angajati.");
   } else {
     console.log("Departamentul " + departamentCautat + " nu există în obiectul angajati.");
   }
-
+return;
+}
+verificareDepartament('departamentIT')
   /* -------------------------------------------------------------------------- */
   /*     Exercițiul 7: Verificarea existenței unei calificări într-un obiect    */
   /* -------------------------------------------------------------------------- */
